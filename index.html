@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>TI-30 · Punkt vor Strich</title>
+  <meta name="description" content="TI-30 (1976) simulation: how a calculator understands the order of operations – step by step.">
+  <meta name="theme-color" content="#1c1109">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1 data-i18n="app.title"></h1>
+      <p data-i18n="app.subtitle"></p>
+    </div>
+    <div class="settings">
+      <button type="button" class="pill" id="btn-lang">EN</button>
+      <label class="pill toggle" data-i18n-title="settings.early.title"><input type="checkbox" id="opt-early"> <span data-i18n="settings.early"></span></label>
+      <button type="button" class="pill" id="btn-install" hidden data-i18n="install"></button>
+    </div>
+  </header>
+
+  <main class="stage">
+    <section class="calc-wrap">
+      <div id="calc"></div>
+      <div class="status" id="status" aria-live="polite"></div>
+    </section>
+    <section class="panel" id="panel" aria-live="off"></section>
+  </main>
+
+  <footer class="foot"><p data-i18n="footer"></p></footer>
+
+  <noscript>This simulation needs JavaScript.</noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
